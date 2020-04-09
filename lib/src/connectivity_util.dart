@@ -1,10 +1,8 @@
 import 'dart:async';
-import 'dart:io';
 
-import 'package:simple_connectivity/simple_connectivity.dart';
-import 'package:rxdart/rxdart.dart';
-
+import 'package:connectivity/connectivity.dart';
 import 'package:http/http.dart' as http;
+import 'package:rxdart/rxdart.dart';
 
 import 'event.dart';
 
@@ -78,7 +76,7 @@ class ConnectivityUtils {
   Sink<Event> get getConnectivityStatusSink =>
       _getConnectivityStatusSubject.sink;
 
-  /// Checkf if phone is connected to the internet
+  /// Check if phone is connected to the internet
   ///
   /// This method tries to access google.com to verify for
   /// internet connection
