@@ -138,6 +138,7 @@ class ConnectivityWidgetState extends State<ConnectivityWidget>
     Widget child = StreamBuilder(
       stream: ConnectivityBloc.instance.connectivityStatusStream,
       builder: (context, snapshot) => Stack(
+      fit: StackFit.expand,        
         children: <Widget>[
           widget.builder(context, snapshot.data ?? true),
           if (widget.showOfflineBanner && !(snapshot.data ?? true))
